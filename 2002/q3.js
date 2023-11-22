@@ -12,7 +12,6 @@ function getFactorPairs(num) {
     pair.push(compliment);
     factors.push(pair);
   }
-
   
   return factors;
 }

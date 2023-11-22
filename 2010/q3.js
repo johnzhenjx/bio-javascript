@@ -18,10 +18,10 @@ function solve(target, capacities){
     if(target == 0) return 0;
     if(target == capacities[0]) return 1;
   }
-  
+
   let distances = {}; distances[capacities.length == 2 ? "0 0" : "0 0 0"] = 0;
   let queue = [capacities.length == 2 ? [0,0] : [0,0,0]];
-  
+
   while(queue.length){
     let current = queue.shift();
     if(current.includes(target)) return distances[current.join(" ")];
@@ -60,4 +60,3 @@ function solve(target, capacities){
     })
   }
 }
-
